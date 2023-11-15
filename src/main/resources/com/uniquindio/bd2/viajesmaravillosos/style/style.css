@@ -1,0 +1,46 @@
+.button{
+    -fx-background-color: #006CE4;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: #230094;
+}
+
+.button_cancel{
+    -fx-background-color: #ff5653;
+}
+
+.button_cancel:hover{
+    -fx-background-color:  #a01212;
+}
+
+.component{
+    -fx-background-color: #9de6db;
+}
+
+.component:hover{
+    -fx-background-color: #6cd9ca;
+}
+
+.root_component{
+    -fx-background-color: #cef2ed;
+    -fx-effect: dropshadow( gaussian, rgba(152, 149, 149, 0.3), 10, 0.0, 5.0, 0.0 );
+    -fx-background-radius: 5;
+}
+
+.root{
+    -fx-background-color: #edf9f1;
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0 );
+}
+
+.card{
+    -fx-background-color: #f7fcf8;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-background-radius: 5;
+}
+
+.head{
+    -fx-background-color: #003B95;
+    -fx-effect: dropshadow( three-pass-box , rgba(168, 165, 165, 0.6), 5, 0.0 , 3 , 3 );
+}

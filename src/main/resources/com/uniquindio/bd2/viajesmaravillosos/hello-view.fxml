@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="796.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" styleClass="head" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Registro de usuario" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="311.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane hgap="15.0" vgap="15.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" maxWidth="292.0" minWidth="10.0" prefWidth="116.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.0" minWidth="0.0" prefWidth="97.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="529.0" minWidth="10.0" prefWidth="145.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="529.0" minWidth="10.0" prefWidth="78.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.0" minWidth="10.0" prefWidth="148.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Cédula" />
+                  <Label text="Nombre" GridPane.rowIndex="1" />
+                  <Label text="Apellido" GridPane.rowIndex="2" />
+                  <TextField promptText="Ingrese la cédula" GridPane.columnIndex="1" />
+                  <TextField promptText="Ingrese el nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField promptText="Ingrese los apellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Direccion" GridPane.columnIndex="3" />
+                  <Label text="E-mail" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Contraseña" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField promptText="Ingrese la dirección" GridPane.columnIndex="4" />
+                  <TextField promptText="Ingrese el e-mail" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField promptText="Ingrese la contraseña" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label text="Fecha de nacimiento" GridPane.rowIndex="3" />
+                  <DatePicker promptText="DD/MM/YYYY" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </DatePicker>
+                  <Label text="Cargo" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ComboBox prefWidth="150.0" promptText="Seleccione el cargo" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="45.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="105.0" styleClass="button_cancel" text="CANCELAR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" prefWidth="105.0" text="REGISTRAR" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="15.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="15.0" right="15.0" top="30.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
