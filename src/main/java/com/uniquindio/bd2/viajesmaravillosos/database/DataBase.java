@@ -1,4 +1,4 @@
-package com.uniquindio.bd2.viajesmaravillosos;
+package com.uniquindio.bd2.viajesmaravillosos.database;
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 
 public class DataBase {
 
-    public static void main( String []arg ){
+    public static void conexion (String query){
         try
         {
             //Se carga el driver JDBC
@@ -22,7 +22,7 @@ public class DataBase {
             String url = "jdbc:oracle:thin:@" + nombre_servidor + ":" + numero_puerto + ":" + sid;
 
             //Nombre usuario y password
-            String usuario = "KEVIN";
+            String usuario = "VIAJESMARAVILLOSOS";
             String password = "root";
 
             //Obtiene la conexion
@@ -30,7 +30,7 @@ public class DataBase {
 
             //Para realiza una consulta
             Statement sentencia = conexion.createStatement();
-            ResultSet resultado = sentencia.executeQuery( "SELECT * FROM EMPLOYEES" );
+            ResultSet resultado = sentencia.executeQuery( query );
 
             //Se recorre el resultado obtenido
             while ( resultado.next() )

@@ -1,22 +1,41 @@
 package com.uniquindio.bd2.viajesmaravillosos;
 
+import com.uniquindio.bd2.viajesmaravillosos.database.DataBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 public class RegistroAutoController {
-    private Stage stage;
 
     @FXML
-    private TextField txtNombre;
+    private TextField txtGama;
 
     @FXML
-    void registrar(ActionEvent event) {
-        stage.close();
+    private TextField txtMarca;
+
+    @FXML
+    private TextField txtPrecio;
+
+    @FXML
+    void actualizarAuto(ActionEvent event) {
+
     }
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
+    @FXML
+    void eliminarAuto(ActionEvent event) {
+
     }
+
+    @FXML
+    void limpiarCampos(ActionEvent event) {
+        txtGama.clear();
+        txtMarca.clear();
+        txtPrecio.clear();
+    }
+
+    @FXML
+    void registrarAuto(ActionEvent event) {
+        DataBase.conexion("SELECT * FROM TRANSACCION");
+    }
+
 }

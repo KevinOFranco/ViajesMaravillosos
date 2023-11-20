@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="796.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="796.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uniquindio.bd2.viajesmaravillosos.RegistroAutoController">
    <top>
       <HBox alignment="CENTER" styleClass="head" BorderPane.alignment="CENTER">
          <children>
@@ -49,19 +49,19 @@
                   <Label text="Gama" GridPane.rowIndex="1" />
                   <Label text="Precio" GridPane.rowIndex="2" />
                   <TextField promptText="Ingrese la cédula" GridPane.columnIndex="1" GridPane.rowSpan="2" />
-                  <TextField promptText="Ingrese el nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField promptText="Ingrese los apellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtGama" promptText="Ingrese el nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtPrecio" promptText="Ingrese los apellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Capacidad" GridPane.columnIndex="3" />
                   <Label text="Marca" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <Label text="Servicio adicional" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <TextField promptText="Ingrese la dirección" GridPane.columnIndex="4" />
-                  <TextField promptText="Ingrese el e-mail" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtMarca" promptText="Ingrese el e-mail" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                   <ComboBox prefWidth="150.0" promptText="Seleccione el cargo" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <HBox spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" prefWidth="105.0" text="CREAR" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#registrarAuto" prefWidth="105.0" text="CREAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -69,7 +69,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" prefWidth="105.0" text="ACTUALIZAR" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#actualizarAuto" prefWidth="105.0" text="ACTUALIZAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -77,7 +77,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" styleClass="button_cancel" text="LIMPIAR CAMPOS" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="NEVER">
+                  <Button mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="27.0" prefWidth="150.0" styleClass="button_cancel" text="LIMPIAR CAMPOS" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="NEVER">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -110,7 +110,7 @@
             </TableView>
             <HBox alignment="TOP_RIGHT" prefHeight="2.0" prefWidth="682.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" styleClass="button_cancel" text="ELIMINAR" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#eliminarAuto" prefHeight="27.0" prefWidth="150.0" styleClass="button_cancel" text="ELIMINAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
