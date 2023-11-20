@@ -48,15 +48,15 @@
                   <Label text="Codigo Auto" />
                   <Label text="Gama" GridPane.rowIndex="1" />
                   <Label text="Precio" GridPane.rowIndex="2" />
-                  <TextField promptText="Ingrese la cédula" GridPane.columnIndex="1" GridPane.rowSpan="2" />
-                  <TextField fx:id="txtGama" promptText="Ingrese el nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtPrecio" promptText="Ingrese los apellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtGama" promptText="Ingrese la gama" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtPrecio" promptText="Ingrese el precio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Capacidad" GridPane.columnIndex="3" />
                   <Label text="Marca" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <Label text="Servicio adicional" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <TextField promptText="Ingrese la dirección" GridPane.columnIndex="4" />
-                  <TextField fx:id="txtMarca" promptText="Ingrese el e-mail" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtCapacidad" promptText="Ingrese la capacidad" GridPane.columnIndex="4" />
+                  <TextField fx:id="txtMarca" promptText="Ingrese la marca" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                   <ComboBox prefWidth="150.0" promptText="Seleccione el cargo" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtCodigo" promptText="Ingrese el codigo" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <HBox spacing="20.0">
@@ -93,13 +93,13 @@
                   <Insets left="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <TableView prefHeight="200.0" prefWidth="755.0">
+            <TableView fx:id="tablaAutos" prefHeight="200.0" prefWidth="755.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Codigo" />
-                <TableColumn prefWidth="75.0" text="Gama" />
-                  <TableColumn prefWidth="75.0" text="Marca" />
-                  <TableColumn prefWidth="75.0" text="Precio" />
-                  <TableColumn prefWidth="75.0" text="Capacidad" />
+                <TableColumn fx:id="columnaCodigo" prefWidth="75.0" text="Codigo" />
+                <TableColumn fx:id="columnaGama" prefWidth="75.0" text="Gama" />
+                  <TableColumn fx:id="columnaMarca" prefWidth="75.0" text="Marca" />
+                  <TableColumn fx:id="columnaPrecio" prefWidth="75.0" text="Precio" />
+                  <TableColumn fx:id="columnaCapacidad" prefWidth="75.0" text="Capacidad" />
               </columns>
                <VBox.margin>
                   <Insets bottom="20.0" left="20.0" right="35.0" top="35.0" />

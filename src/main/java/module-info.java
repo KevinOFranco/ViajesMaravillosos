@@ -13,4 +13,5 @@ module com.uniquindio.bd2.viajesmaravillosos {
     exports com.uniquindio.bd2.viajesmaravillosos;
     exports com.uniquindio.bd2.viajesmaravillosos.database;
     opens com.uniquindio.bd2.viajesmaravillosos.database to javafx.fxml;
+    opens com.uniquindio.bd2.viajesmaravillosos.auto to javafx.base;
 }

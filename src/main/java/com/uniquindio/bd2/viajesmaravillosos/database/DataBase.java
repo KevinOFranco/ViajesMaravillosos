@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 
 public class DataBase {
 
-    public static void conexion (String query){
+    public static ResultSet conexion (String query){
         try
         {
             //Se carga el driver JDBC
@@ -32,18 +32,13 @@ public class DataBase {
             Statement sentencia = conexion.createStatement();
             ResultSet resultado = sentencia.executeQuery( query );
 
-            //Se recorre el resultado obtenido
-            while ( resultado.next() )
-            {
-                //Se imprime el resultado colocando
-                //Para obtener la primer columna se coloca el numero 1 y para la segunda columna 2 el numero 2
-                System.out.println ( resultado.getInt( 1 ) + "\t" + resultado.getString( 2 ) );
-            }
-
             //Cerramos la sentencia
-            sentencia.close();
+            //sentencia.close();
+
+            return resultado;
         }catch( Exception e ){
             e.printStackTrace();
         }
+        return null;
     }
 }
