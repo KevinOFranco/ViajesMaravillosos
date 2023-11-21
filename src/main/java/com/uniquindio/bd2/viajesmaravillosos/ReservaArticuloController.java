@@ -107,14 +107,18 @@ public class ReservaArticuloController {
         Random random = new Random();
         int numeroAleatorio = random.nextInt(900) + 100;
 
+        datosTablaUsuarios.add(articuloSeleccionado);
+
         DataBase.conexion("INSERT INTO pedido (" +
                 "id_detalle_reserva, fecha, saldo, " +
                 "cantidad, estapagado, id_persona, " +
-                "id_articulo) " +
+                "id_articulo, id_reserva) " +
                 "VALUES (" +
-                "'D'"+numeroAleatorio+", TO_DATE('2023-11-21', 'YYYY-MM-DD'), "+ articuloSeleccionado.getPrecio() + ", " +
+                "'D"+numeroAleatorio+"', TO_DATE('2023-11-21', 'YYYY-MM-DD'), "+ articuloSeleccionado.getPrecio() + ", " +
                 "2, 0, 'P001', '" +
-                articuloSeleccionado.getCodigo() + "')");
+                articuloSeleccionado.getCodigo() + "', 'R001')");
+
+
     }
 
     @FXML

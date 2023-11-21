@@ -11,7 +11,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("registro-auto.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("registro-servicio.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         //RegistroHotelController controller = fxmlLoader.getController();
         //controller.setStage(stage);
