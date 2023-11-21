@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="796.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uniquindio.bd2.viajesmaravillosos.RegistroAutoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="796.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uniquindio.bd2.viajesmaravillosos.RegistroHabitacionController">
    <top>
       <HBox alignment="CENTER" styleClass="head" BorderPane.alignment="CENTER">
          <children>
@@ -46,7 +46,6 @@
                <children>
                   <Label text="Codigo Habitación" />
                   <Label text="Codigo Hotel" GridPane.columnIndex="3" />
-                  <TextField fx:id="txtGama" promptText="Ingrese la gama" GridPane.columnIndex="4" />
                   <Label text="Precio Noche" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <Label text="Tipo Habitación" GridPane.rowIndex="1" />
                   <TextField fx:id="txtCodigoHotel" promptText="Ingrese el codigo de hotel" GridPane.columnIndex="4" />

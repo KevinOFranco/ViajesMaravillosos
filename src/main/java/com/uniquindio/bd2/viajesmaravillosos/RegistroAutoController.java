@@ -1,6 +1,6 @@
 package com.uniquindio.bd2.viajesmaravillosos;
 
-import com.uniquindio.bd2.viajesmaravillosos.auto.Auto;
+import com.uniquindio.bd2.viajesmaravillosos.model.Auto;
 import com.uniquindio.bd2.viajesmaravillosos.database.DataBase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -84,7 +84,7 @@ public class RegistroAutoController {
         DataBase.conexion("UPDATE AUTO SET CAPACIDAD = '" + txtCapacidad.getText() + "' WHERE id_auto = 'A001' ");
         DataBase.conexion("UPDATE AUTO SET PRECIO = '" + txtPrecio.getText() + "' WHERE id_auto = 'A001' ");
         DataBase.conexion("UPDATE AUTO SET GAMA = '" + txtGama.getText() + "' WHERE id_auto = 'A001' ");
-}
+    }
 
     @FXML
     void eliminarAuto(ActionEvent event) {

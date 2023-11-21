@@ -1,4 +1,4 @@
-package com.uniquindio.bd2.viajesmaravillosos.auto;
+package com.uniquindio.bd2.viajesmaravillosos.model;
 
 public class Auto {
     private String codigo;
