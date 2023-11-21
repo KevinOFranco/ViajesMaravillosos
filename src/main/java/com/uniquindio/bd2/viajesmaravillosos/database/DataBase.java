@@ -11,7 +11,6 @@ public class DataBase {
         {
             //Se carga el driver JDBC
             DriverManager.registerDriver( new oracle.jdbc.driver.OracleDriver() );
-
             //nombre del servidor
             String nombre_servidor = "127.0.0.1";
             //numero del puerto
@@ -22,8 +21,8 @@ public class DataBase {
             String url = "jdbc:oracle:thin:@" + nombre_servidor + ":" + numero_puerto + ":" + sid;
 
             //Nombre usuario y password
-            String usuario = "VIAJESMARAVILLOSOS";
-            String password = "root";
+            String usuario = "VICTOR_PROY_2";
+            String password = "123";
 
             //Obtiene la conexion
             Connection conexion = DriverManager.getConnection( url, usuario, password );
