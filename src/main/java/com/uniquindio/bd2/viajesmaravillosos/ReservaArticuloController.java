@@ -48,7 +48,7 @@ public class ReservaArticuloController {
     Articulo articuloSeleccionado;
 
     @FXML
-    private void initializeTablaDisponibles() throws SQLException {
+    private void initialize() throws SQLException {
         asignarColumna(columnaCodigoDisponibles, "Codigo");
         asignarColumna(columnaNombreDisponibles, "Nombre");
         asignarColumna(columnaPrecioDisponibles, "Precio");
@@ -73,10 +73,7 @@ public class ReservaArticuloController {
                 articuloSeleccionado = tablaArticulosDisponibles.getSelectionModel().getSelectedItem();
             }
         });
-    }
 
-    @FXML
-    private void initializeTablaUsuario() throws SQLException {
         asignarColumna(columnaCodigoUsuario, "Codigo");
         asignarColumna(columnaNombreUsuario, "Nombre");
         asignarColumna(columnaPrecioUsuario, "Precio");
@@ -84,7 +81,7 @@ public class ReservaArticuloController {
         datosTablaUsuarios = FXCollections.observableArrayList();
         tablaArticulosUsuario.setItems(datosTablaUsuarios);
 
-        ResultSet resultado = DataBase.conexion("SELECT * FROM articulo_tienda art " +
+        resultado = DataBase.conexion("SELECT * FROM articulo_tienda art " +
                 "JOIN pedido ped ON art.id_articulo = ped.id_articulo AND "+
                 "ped.id_persona = 'P001'");
 
